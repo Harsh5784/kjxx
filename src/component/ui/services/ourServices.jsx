@@ -139,7 +139,7 @@ const OurServices = () => {
             showDots={false}
             infinite={true}
             containerClass="carousel-container"
-            removeArrowOnDeviceType={["tablet", "mobile"]}
+            removeArrowOnDeviceType={[""]}
             itemClass="carousel-item"
             autoPlay={!isAutoScrollPaused} // Auto-play when not paused
             autoPlaySpeed={2000}
@@ -225,7 +225,6 @@ const Title = styled.h1`
   margin: 0;
   text-align: left;
   color: #0e7490;
-  text-shadow: #000000 1px 0 10px;
 `;
 
 const StyledCarousel = styled(Carousel)`
