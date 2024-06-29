@@ -1,425 +1,9 @@
-
-
-
-// import React, { useState } from "react";
-// import styled from "styled-components"; 
-// import Carousel from "react-multi-carousel";
-// import "react-multi-carousel/lib/styles.css";
-// import designing from "../../../assets/designing.jpg";
-// import cloudservice from "../../../assets/cloudservice.jpg";
-// import dataeng from "../../../assets/data-engineer.jpg";
-// import dataScience from '../../../assets/otherImage/data_science1.jpeg';
-// import UIUX from "../../../assets/UIUX.webp";
-// import frontend from "../../../assets/frontent.png";
-// import responsive from "../../../assets/responsive-website.png";
-// import mobileapp from "../../../assets/illustration-19.png";
-// import prototype from "../../../assets/prototype.png";
-// import mvc from "../../../assets/mvc.jpg"
-// import azure from "../../../assets/azure-top-band-image.png"
-
-
-// import datastore from "../../../assets/data-store.png"
-//  import dataprocess from "../../../assets/dataAnalysis.png"
-// import datadoc from "../../../assets/data-doc.png"
-// import dataint from "../../../assets/dataIntegration.png"
-
-// import angular from "../../../assets/angular_brand.png"
-// import nodejs from "../../../assets/node_logo.png"
-// import vue from "../../../assets/vue_brand.png"
-// import reactjs from "../../../assets/react_brand.png"
-
-
-// const OurServices = () => {
-//     const [hoveredService, setHoveredService] = useState(null);
-//     const [hoveredAdditionalCard, setHoveredAdditionalCard] = useState(false);
-
-//     const handleMouseEnter = (serviceName) => {
-//         setHoveredService(serviceName);
-//     };
-
-//     const handleMouseLeave = () => {
-//         setHoveredService(null);
-//     };
-
-//     const handleAdditionalCardMouseEnter = () => {
-//         setHoveredAdditionalCard(true);
-//     };
-
-//     const handleAdditionalCardMouseLeave = () => {
-//         setHoveredAdditionalCard(false);
-//     };
-
-//     const responsiveOptions = {
-//         superLargeDesktop: {
-//             breakpoint: { max: 4000, min: 3000 },
-//             items: 4,
-//         },
-//         desktop: {
-//             breakpoint: { max: 3000, min: 1024 },
-//             items: 3,
-//         },
-//         tablet: {
-//             breakpoint: { max: 1024, min: 464 },
-//             items: 2,
-//         },
-//         mobile: {
-//             breakpoint: { max: 464, min: 0 },
-//             items: 1,
-//         },
-//     };
-
-//     const services = [
-//         { image: designing, name: "Designing Service" },
-//         { image: cloudservice, name: "Cloud Services" },
-//         { image: dataeng, name: "Data Engineering" },
-//         { image: dataScience, name: "AI / ML" },
-//         { image: mvc, name: "mvc" }
-//     ];
-
-//     return (
-//         <Section>
-//             <Wrapper>
-//                 <Title className='text-cyan-700'>Services</Title>
-//                 <Holder>
-//                     <Text>
-//                         <H1>Our Services</H1>
-//                     </Text>
-//                     <StyledCarousel
-//                         responsive={responsiveOptions}
-//                         showDots={false}
-//                         infinite={true}
-//                         containerClass="carousel-container"
-//                         removeArrowOnDeviceType={["tablet", "mobile"]}
-//                         itemClass="carousel-item"
-//                         autoPlay={true}
-//                         autoPlaySpeed={2000}
-//                         transitionDuration={1000}
-//                     >
-//                         {services.map((service, index) => (
-//                             <Card key={index} onMouseEnter={() => handleMouseEnter(service.name)} onMouseLeave={handleMouseLeave}>
-//                                 <Image>
-//                                     <img src={service.image} alt={service.name} />
-//                                     <ServiceName>{service.name}</ServiceName>
-//                                 </Image>
-//                                 {(hoveredService === service.name) && (
-//                                     <AdditionalInfo>
-//                                         <AdditionalCardContainer>
-//                                             {service.name === "Designing Service" && (
-//                                                 <>
-//                                                     <AdditionalCard onMouseEnter={handleAdditionalCardMouseEnter} onMouseLeave={handleAdditionalCardMouseLeave}>
-//                                                         <img src={UIUX} alt="UIUX-img"/>
-//                                                         <p>UI/UX DESIGN SERVICES</p>
-//                                                     </AdditionalCard>
-//                                                     <AdditionalCard onMouseEnter={handleAdditionalCardMouseEnter} onMouseLeave={handleAdditionalCardMouseLeave}>
-//                                                         <img src={frontend} alt="frontend-img"/>
-//                                                         <p>FRONTEND DEVELOPMENT</p>
-//                                                     </AdditionalCard>
-//                                                     <AdditionalCard onMouseEnter={handleAdditionalCardMouseEnter} onMouseLeave={handleAdditionalCardMouseLeave}>
-//                                                         <img src={responsive} alt="responsive-img"/>
-//                                                         <p>RESPONSIVE WEBSITE DESIGN</p>
-//                                                     </AdditionalCard>
-//                                                     <AdditionalCard onMouseEnter={handleAdditionalCardMouseEnter} onMouseLeave={handleAdditionalCardMouseLeave}>
-//                                                         <img src={mobileapp} alt="mobileapp-img"/>
-//                                                         <p>MOBILE APPLICATION SERVICES</p>
-//                                                     </AdditionalCard>
-//                                                     <AdditionalCard onMouseEnter={handleAdditionalCardMouseEnter} onMouseLeave={handleAdditionalCardMouseLeave}>
-//                                                         <img src={prototype} alt="prototype-img"/>
-//                                                         <p>DESIGN PROTOTYPING</p>
-//                                                     </AdditionalCard>
-//                                                 </>
-//                                             )}
-//                                             {
-                                            
-//                                             service.name === "Cloud Services" && (
-//                                                 <>
-//                                                     <AdditionalCard onMouseEnter={handleAdditionalCardMouseEnter} onMouseLeave={handleAdditionalCardMouseLeave}>
-//                                                     <img src={cloudservice} alt="cloudservice-img"/>
-//                                                     <p >CLOUD SERVICES</p>
-                  
-//                                                     </AdditionalCard>
-//                                                     <AdditionalCard onMouseEnter={handleAdditionalCardMouseEnter} onMouseLeave={handleAdditionalCardMouseLeave}>
-//                                                     <img src={azure} alt="azure-img"/>
-//                    <p>AZURE SERVICES</p>
-//                                                     </AdditionalCard>
-//                                                     <AdditionalCard onMouseEnter={handleAdditionalCardMouseEnter} onMouseLeave={handleAdditionalCardMouseLeave}>
-//                                                     <img src="https://i.ibb.co/G38zPXn/what-is-amazon-web-services-aws-Photo-Room-png-Photo-Room.png" alt="aws-img"/>
-//                              <p>AWS SERVICES</p>
-//                                                     </AdditionalCard>
-//                                                     <AdditionalCard onMouseEnter={handleAdditionalCardMouseEnter} onMouseLeave={handleAdditionalCardMouseLeave}>
-//                                                     <img src="https://i.ibb.co/mRd5cmB/hero16-9-machinelearning-portefolio.png" alt="gpu-img"/>
-//    <p>GPU SERVICE DEVELOPMENT</p>
-//                                                     </AdditionalCard>
-//                                                     <AdditionalCard onMouseEnter={handleAdditionalCardMouseEnter} onMouseLeave={handleAdditionalCardMouseLeave}>
-                                                        
-//                                                         {/* <p>DESIGN PROTOTYPING</p> */}
-//                                                     </AdditionalCard>
-//                                                 </>
-//                                             )
-                                            
-//                                             }
-
-
-
-
-// {
-                                            
-//                                             service.name === "Data Engineering" && (
-//                                                 <>
-//                                                     <AdditionalCard onMouseEnter={handleAdditionalCardMouseEnter} onMouseLeave={handleAdditionalCardMouseLeave}>
-//                                                     <img src={dataeng} alt="data-eng-img"/>
-//  <p>DATA ENGINEERING</p>
-//                                                     </AdditionalCard>
-//                                                     <AdditionalCard onMouseEnter={handleAdditionalCardMouseEnter} onMouseLeave={handleAdditionalCardMouseLeave}>
-//                                                     <img src={datastore} alt="data-storage-img"/>
-//                                  <p>DATA STORAGE</p>
-//                                                     </AdditionalCard>
-//                                                     <AdditionalCard onMouseEnter={handleAdditionalCardMouseEnter} onMouseLeave={handleAdditionalCardMouseLeave}>
-//                                                     <img src={dataprocess} alt="data-process-img"/>
-//                                  <p>DATA PROCESSING</p>
-//                                                     </AdditionalCard>
-//                                                     <AdditionalCard onMouseEnter={handleAdditionalCardMouseEnter} onMouseLeave={handleAdditionalCardMouseLeave}>
-//                                                     <img src={datadoc} alt="data-document-img"/>
-//                                  <p>DATA DOCUMENTATION</p>
-//                                                     </AdditionalCard>
-//                                                     <AdditionalCard onMouseEnter={handleAdditionalCardMouseEnter} onMouseLeave={handleAdditionalCardMouseLeave}>
-//                                                     <img src={dataint} alt="data-intergration-img"/>
-//                                <p>DATA INTEGRATION</p>
-//                                                     </AdditionalCard>
-//                                                 </>
-//                                             )
-                                            
-//                                             }
-
-
-
-
-// {
-                                            
-//                                             service.name === "AI / ML" && (
-//                                                 <>
-//                                                     <AdditionalCard onMouseEnter={handleAdditionalCardMouseEnter} onMouseLeave={handleAdditionalCardMouseLeave}>
-//                                                     <img src={dataScience} alt="data-eng-img"/>
-//  <p>AI / ML</p>
-//                                                     </AdditionalCard>
-//                                                     <AdditionalCard onMouseEnter={handleAdditionalCardMouseEnter} onMouseLeave={handleAdditionalCardMouseLeave}>
-                                                       
-//  <img src="https://i.ibb.co/LNzCRNh/1698535.png" alt="data-storage-img"/>
-//                    <p>CHATBOT</p>
-
-//                                                     </AdditionalCard>
-//                                                     <AdditionalCard onMouseEnter={handleAdditionalCardMouseEnter} onMouseLeave={handleAdditionalCardMouseLeave}>
-//                                                     <img src="https://i.ibb.co/DWshj53/8637099.png" alt="data-process-img"/>
-//    <p>MACHINE LEARNING</p>
-//                                                     </AdditionalCard>
-//                                                     <AdditionalCard onMouseEnter={handleAdditionalCardMouseEnter} onMouseLeave={handleAdditionalCardMouseLeave}>
-//                                                     <img src='https://i.ibb.co/G7m1hqH/68747470733a2f2f7777772e74656e736f72666c6f772e6f72672f696d616765732f74665f6c6f676f5f686f72697a6f6e74.png' alt="data-document-img"/>
-//               <p>TENSORFLOW</p>
-//                                                     </AdditionalCard>
-//                                                     <AdditionalCard onMouseEnter={handleAdditionalCardMouseEnter} onMouseLeave={handleAdditionalCardMouseLeave}>
-                                                        
-//                                                         {/* <p>DESIGN PROTOTYPING</p> */}
-//                                                     </AdditionalCard>
-//                                                 </>
-//                                             )
-                                            
-//                                             }
-
-
-
-// {
-                                            
-//                                             service.name === "mvc" && (
-//                                                 <>
-//                                                     <AdditionalCard onMouseEnter={handleAdditionalCardMouseEnter} onMouseLeave={handleAdditionalCardMouseLeave}>
-//                                                     <img src={angular} alt="angular-img"/>
-//                      <p>ANGULAR JS</p>
-//                                                     </AdditionalCard>
-//                                                     <AdditionalCard onMouseEnter={handleAdditionalCardMouseEnter} onMouseLeave={handleAdditionalCardMouseLeave}>
-//                                                     <img src={nodejs} alt="nodejs-img"/>
-//                  <p>NODE JS</p>
-//                                                     </AdditionalCard>
-//                                                     <AdditionalCard onMouseEnter={handleAdditionalCardMouseEnter} onMouseLeave={handleAdditionalCardMouseLeave}>
-//                                                     <img src={vue} alt="vue-img"/>
-//                <p>VUE JS</p>
-//                                                     </AdditionalCard>
-//                                                     <AdditionalCard onMouseEnter={handleAdditionalCardMouseEnter} onMouseLeave={handleAdditionalCardMouseLeave}>
-//                                                     <img src={reactjs} alt="reactjs-img"/>
-//           <p>REACT JS</p>
-//                                                     </AdditionalCard>
-//                                                     <AdditionalCard onMouseEnter={handleAdditionalCardMouseEnter} onMouseLeave={handleAdditionalCardMouseLeave}>
-                                                       
-//                                                     </AdditionalCard>
-//                                                 </>
-//                                             )
-                                            
-//                                             }
-//                                         </AdditionalCardContainer>
-//                                     </AdditionalInfo>
-//                                 )}
-//                             </Card>
-//                         ))}
-//                     </StyledCarousel>
-//                 </Holder>
-//             </Wrapper>
-//         </Section>
-//     );
-// }
-
-// export default OurServices;
-
-// const StyledCarousel = styled(Carousel)`
-//     .carousel-item {
-//         margin-right: 20px;
-//     }
-// `;
-
-// const Card = styled.div`
-//     width: 100%;
-//     height: auto;
-//     display: flex;
-//     justify-content: center;
-//     align-items: center;
-//     box-shadow: 0px 0px 5px lightgrey;
-//     border-radius: 10px;
-//     padding: 10px;
-//     margin: 20px 10px;
-//     cursor: pointer;
-//     position: relative;
-
-//     &:hover {
-//         transform: scale(1.05);
-//         transition: all 0.5s ease-in-out;
-//     }
-// `;
-
-// const Text = styled.div`
-//     margin-top: 20px;
-// `;
-
-// const H1 = styled.h1`
-//     margin: 0;
-//     font-size: 24px;
-//     color: #000;
-// `;
-
-// const Holder = styled.div`
-//     width: 100%;
-//     min-height: 88vh;
-//     height: 100%;
-//     align-self: center;
-// `;
-
-// const Title = styled.h1`
-//     font-size: 70px;
-//     margin: 0;
-// `;
-
-// const Wrapper = styled.div`
-//     width: 95%;
-//     display: flex;
-//     flex-direction: column;
-// `;
-
-// const Section = styled.section`
-//     width: 100%;
-//     display: flex;
-//     justify-content: center;
-//     align-items: center;
-//     padding: 20px 0px;
-//     color: #000;
-// `;
-
-// const Image = styled.div`
-//     width: 100%;
-//     height: 480px;
-//     position: relative;
-
-//     img {
-//         width: 100%;
-//         height: 100%;
-//         object-fit: wrap;
-//         border-radius: 10px;
-//     }
-// `;
-
-// const ServiceName = styled.p`
-//     position: absolute;
-//     bottom: 10px;
-//     left: 0;
-//     right: 0;
-//     text-align: center;
-//     margin: 0;
-//     font-size: 35px;
-//     font-weight: bold;
-//     color: #fff;
-//     padding: 10px;
-//     border-bottom-left-radius: 10px;
-//     border-bottom-right-radius: 10px;
-// `;
-
-// const AdditionalInfo = styled.div`
-//     position: absolute;
-//     bottom: 0;
-//     left: 0;
-//     right: 0;
-//     display: flex;
-//     flex-direction: column;
-//     align-items: center;
-//     padding: 25px;
-//     background-color: rgba(0, 0, 0, 0.9);
-//     border-bottom-left-radius: 10px;
-//     border-bottom-right-radius: 10px;
-//     border-top-left-radius: 10px;
-//     border-top-right-radius: 10px;
-// `;
-
-// const AdditionalCardContainer = styled.div`
-//     display: flex;
-//     flex-direction: column;
-//     align-items: center;
-//     width: 100%;
-// `;
-
-// const AdditionalCard = styled.div`
-//     width: 90%;
-//     height: 80px; /* Decreased height */
-//     display: flex;
-//     flex-direction: column;
-//     justify-content: center;
-//     align-items: center;
-//     box-shadow: 0px 0px 5px lightgrey;
-//     border-radius: 10px;
-//     padding: 10px;
-//     margin: 5px 0; /* Decreased margin */
-//     cursor: pointer;
-//     transition: all 0.3s ease;
-
-//     &:hover {
-//         transform: scale(1.05);
-//     }
-
-//     img {
-//         width: 50px; 
-//         height: 50px; 
-//         object-fit: cover;
-//         border-radius: 50%;
-//         margin-bottom: 5px; 
-//     }
-
-//     p {
-//         margin: 0;
-//         font-size: 20px;
-//         color: #fff;
-//         text-align: center;
-//     }
-// `;
-
-
-
-
-
 import React, { useState } from "react";
 import styled from "styled-components";
+import Carousel from "react-multi-carousel";
+import "react-multi-carousel/lib/styles.css";
+
+// Import your images
 import designing from "../../../assets/designing.jpg";
 import cloudservice from "../../../assets/cloudservice.jpg";
 import dataeng from "../../../assets/data-engineer.jpg";
@@ -439,13 +23,71 @@ import reactjs from "../../../assets/react_brand.png";
 
 const OurServices = () => {
   const [hoveredService, setHoveredService] = useState(null);
+  const [isAutoScrollPaused, setIsAutoScrollPaused] = useState(false);
 
   const handleMouseEnter = (serviceName) => {
     setHoveredService(serviceName);
+    setIsAutoScrollPaused(true); // Pause auto-scroll when hovering
   };
 
   const handleMouseLeave = () => {
     setHoveredService(null);
+    setIsAutoScrollPaused(false); // Resume auto-scroll when leaving hover
+  };
+
+  const getImageName = (imageUrl, isPrimaryImage) => {
+    // Handle local images first
+    if (!imageUrl.startsWith("http")) {
+      switch (imageUrl) {
+        case UIUX:
+          return "UI/UX Design";
+        case frontend:
+          return "Frontend Development";
+        case azure:
+          return "Microsoft Azure";
+        case datastore:
+          return "Data Store";
+        case dataprocess:
+          return "Data Processing";
+        case datadoc:
+          return "Data Documentation";
+        case dataint:
+          return "Data Integration";
+        case angular:
+          return "Angular";
+        case nodejs:
+          return "Node.js";
+        case vue:
+          return "Vue.js";
+        case reactjs:
+          return "React.js";
+        default:
+          return "Image Name";
+      }
+    } else {
+      // Handle remote URLs (preferably not using switch case)
+      if (imageUrl.includes("amazon-web-services")) {
+        return "Amazon Web Services";
+      } else if (imageUrl.includes("machinelearning-portefolio")) {
+        return "GPU Services";
+      } else if (imageUrl.includes("1698535")) {
+        return "Chatbot";
+      } else if (imageUrl.includes("8637099")) {
+        return "Machine Learning";
+      } else if (imageUrl.includes("68747470733a2f2f7777772e74656e736f7266")) {
+        return "TensorFlow";
+      } else {
+        return "Image Name";
+      }
+    }
+  };
+  
+
+  const responsiveOptions = {
+    superLargeDesktop: { breakpoint: { max: 4000, min: 3000 }, items: 4 },
+    desktop: { breakpoint: { max: 3000, min: 1024 }, items: 3 },
+    tablet: { breakpoint: { max: 1024, min: 464 }, items: 2 },
+    mobile: { breakpoint: { max: 464, min: 0 }, items: 1 },
   };
 
   const services = [
@@ -466,7 +108,7 @@ const OurServices = () => {
     {
       image: dataeng,
       name: "Data Engineering",
-      additionalImages: [datastore, dataprocess, datadoc, dataint], 
+      additionalImages: [datastore, dataprocess, datadoc, dataint],
     },
     {
       image: dataScience,
@@ -480,7 +122,7 @@ const OurServices = () => {
     {
       image: mvc,
       name: "MVC",
-      additionalImages: [angular, nodejs, vue, reactjs], 
+      additionalImages: [angular, nodejs, vue, reactjs],
     },
   ];
 
@@ -492,7 +134,17 @@ const OurServices = () => {
           <Text>
             <H1>Our Services</H1>
           </Text>
-          <CardsContainer>
+          <StyledCarousel
+            responsive={responsiveOptions}
+            showDots={false}
+            infinite={true}
+            containerClass="carousel-container"
+            removeArrowOnDeviceType={["tablet", "mobile"]}
+            itemClass="carousel-item"
+            autoPlay={!isAutoScrollPaused} // Auto-play when not paused
+            autoPlaySpeed={2000}
+            transitionDuration={1000}
+          >
             {services.map((service, index) => (
               <Card
                 key={index}
@@ -505,19 +157,19 @@ const OurServices = () => {
                   <ServiceName>{service.name}</ServiceName>
                   {hoveredService === service.name && (
                     <AdditionalInfo>
-                      {/* Display top items */}
                       <TopItems>
                         {service.additionalImages.slice(0, 2).map((image, index) => (
-                          <AdditionalCard key={index}>
+                          <AdditionalCard key={index} style={{ transitionDelay: `${index * 0.}s` }}>
                             <img src={image} alt={`additional-${index}`} />
+                            <ImageLabel>{getImageName(image, true)}</ImageLabel>
                           </AdditionalCard>
                         ))}
                       </TopItems>
-                      {/* Display bottom items */}
                       <BottomItems>
                         {service.additionalImages.slice(2).map((image, index) => (
-                          <AdditionalCard key={index}>
+                          <AdditionalCard key={index} style={{ transitionDelay: `${index * 0.2}s` }}>
                             <img src={image} alt={`additional-${index}`} />
+                            <ImageLabel>{getImageName(image, false)}</ImageLabel>
                           </AdditionalCard>
                         ))}
                       </BottomItems>
@@ -526,7 +178,7 @@ const OurServices = () => {
                 </ImageWrapper>
               </Card>
             ))}
-          </CardsContainer>
+          </StyledCarousel>
         </ContentWrapper>
       </Wrapper>
     </Section>
@@ -536,48 +188,22 @@ const OurServices = () => {
 const ContentWrapper = styled.div`
   width: 100%;
   position: relative;
+  white-space: nowrap; /* Keep all cards in a single line */
 `;
 
-const CardsContainer = styled.div`
+const Section = styled.section`
+  width: 100%;
   display: flex;
   justify-content: center;
-  gap: 20px; 
-  padding: 5px; 
-  position: relative;
-  z-index: 100; 
+  align-items: center;
+  padding: 20px 0px;
+  color: #fff;
 `;
 
-const Card = styled.div`
-  position: relative;
-  width: 450px;
-  height: 200px;
+const Wrapper = styled.div`
+  width: 95%;
   display: flex;
   flex-direction: column;
-  justify-content: center; 
-  align-items: center; 
-  box-shadow: 0px 0px 5px grey;
-  border-radius: 15px;
-  overflow: visible; 
-  cursor: pointer;
-  transition: transform 0.4s, box-shadow 0.3s, margin 0.3s;
-  margin-bottom: 20px;
-  z-index: 1; 
-
-  &:hover {
-    transform: scale(1.2); 
-    box-shadow: 0px 0px 15px grey;
-    z-index: 100; 
-    margin: 0 10px; 
-    gap:px;
-  }
-
-  ${(props) =>
-    !props.isHovered &&
-    `
-    transform: scale(0.8); 
-    margin: 0 -30px; 
-    gap: 5px;
-  `}
 `;
 
 const Text = styled.div`
@@ -599,21 +225,39 @@ const Title = styled.h1`
   margin: 0;
   text-align: left;
   color: #0e7490;
+  text-shadow: #000000 1px 0 10px;
 `;
 
-const Wrapper = styled.div`
-  width: 95%;
-  display: flex;
-  flex-direction: column;
+const StyledCarousel = styled(Carousel)`
+  .carousel-item {
+    margin-right: 20px;
+  }
 `;
 
-const Section = styled.section`
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 20px 0px;
-  color: #fff;
+const Card = styled.div`
+  position: relative;
+  width: 450px; /* Adjust the width of each card */
+  height: 300px; /* Adjust the height of each card */
+  display: inline-block;
+  box-shadow: 0px 0px 5px grey;
+  border-radius: 15px;
+  cursor: pointer;
+  transition: transform 0.2s, box-shadow 0.3s, margin 0.3s;
+  z-index: 1;
+  margin: 50px;
+
+  &:hover {
+    transform: scale(0.9);
+    box-shadow: 10px 10px 10px grey;
+    z-index: 100;
+    gap: 30px;
+  }
+
+  ${(props) =>
+    !props.isHovered &&
+    `
+    transform: scale(0.9);
+  `}
 `;
 
 const ImageWrapper = styled.div`
@@ -622,76 +266,74 @@ const ImageWrapper = styled.div`
   height: 100%;
 
   img {
-    width: 400px;
+    width: 100%;
     height: 100%;
     object-fit: cover;
     border-radius: 10px;
-    transition: transform 0.3s ease-in-out;
-    z-index: 10; 
+    transition: transform 0.2s ease-in-out;
   }
 `;
 
 const ServiceName = styled.p`
   position: absolute;
-  bottom: 20px; 
+  top: 50%;
   left: 0;
   right: 0;
+  transform: translateY(-50%);
   text-align: center;
- text-shadow: #000000 1px 0 10px;
-  margin-bottom: 52px;
-  font-size: 30px;
+  font-size: 24px; /* Adjust font size as needed */
   font-weight: bold;
   color: #fff;
-  z-index: 2; 
+  z-index: 2;
 `;
 
 const AdditionalInfo = styled.div`
   position: absolute;
-  top: 100%; 
+  width: 100%;
+  top: 100%;
   left: 50%;
   transform: translateX(-50%);
-  width: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: space-between;
-  z-index: 10; 
-  transition: top 0.3s ease; 
+  justify-content: space-around;
+  z-index: 10;
+  transition: top 0.2s ease;
 
   ${Card}:hover & {
-    top: 0; 
+    top: -4.5rem;
   }
 `;
 
 const TopItems = styled.div`
   display: flex;
   justify-content: space-evenly;
-  gap: 150px; 
-  top:0px;
-  margin-bottom: 20px; 
+  gap: 200px;
+  margin-bottom: 6rem;
 `;
 
 const BottomItems = styled.div`
   display: flex;
-  justify-content: center; 
-  gap: 170px; 
-  margin-top: 90px; 
+  justify-content: center;
+  gap: 200px;
+  margin-top: 180px;
 `;
 
 const AdditionalCard = styled.div`
-  width: 150px; 
+  width: 150px;
   height: 100px;
-  overflow: visible; 
-  border-radius: 1000px;
+  overflow: hidden; /* Ensure overflow is hidden */
+  border-radius: 8px; /* Adjust border radius as needed */
   cursor: pointer;
   transition: transform 0.2s ease-in-out;
+  position: relative; /* Ensure positioning context */
 
   img {
-    width: 45%;
+    width: 40%;
     height: 60%;
     object-fit: cover;
-    transition: transform 0.3s ease-in-out;
-    z-index: 100; 
+    transition: transform 0.2s ease-in-out;
+    margin-left: 40px;
   }
 
   &:hover {
@@ -699,4 +341,22 @@ const AdditionalCard = styled.div`
   }
 `;
 
+const ImageLabel = styled.p`
+  position: absolute;
+  bottom: 5px;
+  left: 0;
+  right: 0;
+  text-align: center;
+  margin-bottom: 18px;
+  margin:right: 20px;
+  padding: 0px 0px; /* Padding around text */
+  font-size: 16px; /* Adjust font size as needed */
+  color: #000000;
+  white-space: nowrap; /* Ensure text doesn't wrap */
+  overflow: hidden; /* Ensure no overflow */
+  text-overflow: clip; /* Show ellipsis if text is too long */
+`;
+
 export default OurServices;
+
+
